@@ -148,4 +148,12 @@ const config = {
     }),
 };
 
-export default config;
+export default {
+  // ...
+  url: 'https://stix360.github.io', // Your website URL
+  baseUrl: '/',
+  projectName: 'stix360.github.io/stx-doco',
+  organizationName: 'stix360',
+  trailingSlash: false,
+  // ...
+};
