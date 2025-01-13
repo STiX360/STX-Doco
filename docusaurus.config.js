@@ -5,6 +5,9 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+const {themes} = require('prism-react-renderer');
+const lightCodeTheme = themes.github;
+const darkCodeTheme = themes.dracula;
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -75,7 +78,12 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
-      navbar: {
+      colorMode: {
+        defaultMode: 'dark',
+        respectPrefersColorScheme: false,
+		disableSwitch: true,
+      },
+	  navbar: {
         title: 'My Site',
         logo: {
           alt: 'My Site Logo',
@@ -148,12 +156,5 @@ const config = {
     }),
 };
 
-export default {
-  // ...
-  url: 'https://stix360.github.io', // Your website URL
-  baseUrl: '/',
-  projectName: 'stx-doco',
-  organizationName: 'stix360',
-  trailingSlash: false,
-  // ...
-};
+export default config;
+
